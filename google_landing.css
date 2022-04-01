@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial,sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.top{
+    margin-top: 0;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.top a{
+    margin-left: 25px  ;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+}
+
+.top a:hover{
+    text-decoration: underline;
+}
+
+.appicon{
+    width: 25px;  
+}
+.appicon-a:hover .appicon{
+    opacity: .6;
+
+}
+
+.top-tooltiptext{
+    visibility: hidden;
+    width: 80px;
+    background-color: rgb(87, 86, 86);
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    padding:3px 5px;
+    position: absolute;
+    z-index: 1;
+    top: 38px;
+    left: 29px;
+    border-radius: 8px;
+    margin-left: -60px;
+    transition: all ;
+    transition-timing-function: ease-out;
+}
+
+.appicon-a:hover .top-tooltiptext{
+    visibility: visible;
+}
+
+
+
+.sign-in-btn{
+    margin-left: 25px;
+    color: white;
+    background-color: #2372f1;
+    border: none;
+    height: 35px;
+    width: 90px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.sign-in-btn:hover{
+    background-color: #4285F4 ;
+    cursor: pointer;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.google-logo{
+    margin-bottom: 30px;
+}
+
+.search{
+    width: 580px;
+    height: 42px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.search:hover{
+    box-shadow: 0 0 8px lightgray;
+}
+
+.search-icon{
+    width: 15px;
+    height:15px;
+    opacity:0.4 ;
+    margin-left: 20px;
+}
+
+.main-input{
+    vertical-align: middle;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    width: 415px;
+    height: 30px;
+    font-size: 18px;
+}
+
+.mic-icon{
+    width: 13px;
+    height: 22px;
+    margin-left: 20px;
+}
+.icon-1, .icon-2{
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    top: 42px;
+    left: 23px;
+    margin-left: -60px;
+}
+
+.icon-1 .tooltiptext::after, .icon-2 .tooltiptext::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.icon-1:hover .tooltiptext, .icon-2:hover .tooltiptext{
+    visibility: visible;
+}
+
+
+.img-icon{ 
+    width: 24px;
+    height:24px;
+    margin-left: 20px;
+}
+
+.btn{
+    width: 150px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+}
+
+.btn:hover{
+    box-shadow: 0 0 2px gray;
+    cursor: pointer;
+}
+
+p{
+    margin-top: 30px;
+    font-size: 14px;  
+}
+
+p a{
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.footer{
+    
+    background-color: #efeff0;
+    font-size: 15px;  
+}
+
+.country{
+    padding:15px 30px;
+    border-bottom: 1px solid lightgray;
+    color: #70757a;
+}
+
+.foot{
+    color: #70757a;
+    display: flex;
+    justify-content: space-between;
+    padding:15px 30px;
+}
+
+.left-foot{
+    list-style: none;
+    float: left;
+}
+
+.right-foot{
+    list-style: none;
+    float: right;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 5px 5px;   
+}
+
+.footer a{
+    text-decoration: none;
+    color: #70757a;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 850px){
+    .foot {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+    .icon-2{
+        padding-right: 10px;
+    }
+
+    .search{
+        width: 400px;
+    }
+}
